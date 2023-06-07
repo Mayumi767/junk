@@ -2,13 +2,13 @@ import re
 import json
 import urllib.request
 
-repo = "Mayumi767/junk"  # repo address <username>/<repo name>
+Repo = "Mayumi767/junk"  # repo address <username>/<repo name>
 Folder = "images"  # image folder in git repo
 
 if Folder != '':
-    API_url = f'https://api.github.com/repos/{repo}/contents/{Folder}'
+    API_url = f'https://api.github.com/repos/{Repo}/contents/{Folder}'
 else:
-    API_url = f'https://api.github.com/repos/{repo}/contents'
+    API_url = f'https://api.github.com/repos/{Repo}/contents'
 
 try:
     with urllib.request.urlopen(API_url) as response:
